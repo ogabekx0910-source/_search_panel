@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+h1 {
+    font-family: monospace;
+    padding: 32px;
+}
+
+.main {
+    display: flex;
+    gap: 16px;
+    padding: 0 32px 32px;
+}
+
+input,
+select {
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #838383;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 16px;
+
+    transition: 0.2s linear;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.item {
+    width: 50%;
+    padding: 10px 40px;
+    font-family: monospace;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 9px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+}
+
+.item:hover {
+    padding: 10px 40px;
+    border-radius: 9px;
+    background-color: bisque;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.96);
+    width: 50.5%;
+    transition: 0.2s linear;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.item .group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+input:hover,
+select:hover,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    background-color: #ccc;
+    color: #130e0e;
+    -webkit-appearance: none;
+    margin: 0;
+}
