@@ -46,41 +46,39 @@ select:focus {
     border-color: #000000;
 }
 
-.item {
-    width: 50%;
-    padding: 10px 40px;
+#item {
+    /* display: flex; */
+
     font-family: monospace;
-    border: none;
-    background-color: #f0f0f0;
+    border: 0px solid white;
+    background-color: slategray;
     border-radius: 9px;
-    margin: 0 auto;
-    display: flex;
-    gap: 30px;
     font-size: 16px;
+    transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.item:hover {
-    padding: 10px 40px;
+h3 {
+    color: var(--color);
+}
+
+#item:hover {
+    transform: translateY(-10px) translateX(10px);
     border-radius: 9px;
-    background-color: bisque;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.96);
-    width: 50.5%;
+    background-color: var(--color);
+    scale: 1.01;
+    box-shadow: -10px 10px 20px black;
     transition: 0.2s linear;
 }
 
 #result {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    column-gap: 20px;
+    row-gap: 50px;
+    margin: 30px 50px;
 }
 
-.item .group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
-}
+
 
 input:hover,
 select:hover,
@@ -90,4 +88,31 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #130e0e;
     -webkit-appearance: none;
     margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0 20px 20px;
+}
+
+p {
+    color: black;
+}
+
+button {
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 30px;
+    padding-top: 3px;
+    background-color: #ccc;
+    border-radius: 5px;
+    transition: transform 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+}
+
+button:hover {
+    background-color: chartreuse;
+    transition: 0.5s;
+    opacity: 0.8;
 }
